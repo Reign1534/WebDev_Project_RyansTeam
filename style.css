@@ -1,6 +1,8 @@
+/* Original Base Styles */
 body {
   background-color: lightblue;
-
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -17,6 +19,8 @@ h2 {
   font-family: arial;
   color: cyan;
 }
+
+/* Original Nav Styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -36,11 +40,57 @@ nav {
   gap: 25px;
 }
 
+/* Task 1: Pseudo-class selector */
 .links a {
   color: white;
   text-decoration: none;
+  font-family: verdana;
 }
 
 .links a:hover {
   color: #aaa;
+}
+
+/* Task 3: Background Image & Additional Background Properties */
+.hero-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pexels-fede-arna-6239970.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Task 1: ID Selector */
+#hero-heading {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+/* Page Content Wrapper */
+.container {
+  width: 85%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+/* Task 2: CSS Box Model (width, height, padding, margin, border) */
+.card {
+  width: 90%;
+  padding: 20px;
+  margin: 25px auto;
+  border: 3px solid #111;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+
+.card h2 {
+  color: #004d61; /* Darker cyan for readability on light background */
+  margin-top: 0;
+}
+
+.card img {
+  border-radius: 6px;
+  margin-top: 10px;
 }
