@@ -68,6 +68,10 @@ nav {
   margin-bottom: 15px;
 }
 
+li {
+  font-size: 25px;
+}
+
 /* Page Content Wrapper */
 .container {
   width: 85%;
