@@ -20,7 +20,6 @@ h2 {
   color: cyan;
 }
 
-/* Original Nav Styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -40,18 +39,19 @@ nav {
   gap: 25px;
 }
 
-/* Task 1: Pseudo-class selector */
+
 .links a {
   color: white;
   text-decoration: none;
   font-family: verdana;
+  /* NOTE (Change 1 - Lab 11 Transition): Added smooth color transition for the link hover effect */
+  transition: color 0.3s ease;
 }
 
 .links a:hover {
   color: #aaa;
 }
 
-/* Task 3: Background Image & Additional Background Properties */
 .hero-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pexels-fede-arna-6239970.jpg');
   background-size: cover;
@@ -62,24 +62,32 @@ nav {
   text-align: center;
 }
 
-/* Task 1: ID Selector */
+/* NOTE (Change 2): Added a simple fade-in animation for the main heading */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 #hero-heading {
   font-size: 38px;
   margin-bottom: 15px;
+  animation: fadeIn 1.2s ease-in;
 }
 
 li {
   font-size: 25px;
 }
 
-/* Page Content Wrapper */
 .container {
   width: 85%;
   max-width: 900px;
   margin: 30px auto;
+  /*Change 3 Added Flexbox to arrange the cards neatly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Task 2: CSS Box Model (width, height, padding, margin, border) */
 .card {
   width: 90%;
   padding: 20px;
@@ -97,4 +105,32 @@ li {
 .card img {
   border-radius: 6px;
   margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* change 4 Added media queries for Mobile (<600px), Tablet (600px-1024px), and Desktop (>1024px) */
+@media screen and (max-width: 599px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  p, li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .container {
+    width: 92%;
+  }
+  p, li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    max-width: 1000px;
+  }
 }
